@@ -1,37 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
+//weather API base funcntionality
+document.addEventListener("DOMContentLoaded", function () {
+  const searchButton = document.getElementById("btn");
+  const zipcodeInput = document.getElementById("zipCode");
 
+  searchButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
+    const zipCode = zipcodeInput.value;
 
+    // Make the API request to OpenWeatherMap's Geocoding API
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},us&appid=${apiKey}`;
 
-    const searchButton = document.getElementById("btn");
-    const locationInput = document.getElementById("location"); //Input for the users location text
+    fetch(weatherUrl)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        
+        const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
+        const humidity = data.main.humidity; // humidity
+        const butfeelsLike = Math.round(1.8 * (data.main.feels_like - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
+        const currentDate = dayjs().format("MM/DD"); // current date and time
+        const windSpeed = data.wind.speed; //current windspeed
 
-    searchButton.addEventListener("click", function(event) {
-        event.preventDefault();
-        var apiKey = "a1c24f9ef9bb705299a22d8524be3474";
-        const location = locationInput.value; //Turns the city location typed by the user into a variable
+        const imgCode = data.weather[0].icon; // The variable for the current weather image symbol
+        const icon = document.createElement("img");
+        icon.setAttribute(
+          "src",
+          `https://openweathermap.org/img/wn/${imgCode}@2x.png`
+        );
 
-        // Make the API request to OpenWeatherMap's Geocoding API
-        const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q='${location}'&limit=50&appid=${apiKey}`;
-
-        fetch(geocodingUrl)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                var latitude = data[0].lat;
-                var longitude = data[0].lon;
-                console.log(longitude);
-
-                const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`;
-                console.log(weatherURL);
-
-                // Continue with the API request for weather data
-                return fetch(weatherURL);
-            });
-
-       
-    });
+        console.log(data);
+      });
+  });
 });
 
-//Line 1-35 Weather API functionality
+
