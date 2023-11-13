@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
 
 
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchButton = document.getElementById("btn");
     const locationInput = document.getElementById("location"); //Input for the users location text
 
-    searchButton.addEventListener("click", function(event) {
+    searchButton.addEventListener("click", function (event) {
         event.preventDefault();
         var apiKey = "a1c24f9ef9bb705299a22d8524be3474";
         const location = locationInput.value; //Turns the city location typed by the user into a variable
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
         const geocodingUrl = `https://api.openweathermap.org/geo/1.0/direct?q='${location}'&limit=50&appid=${apiKey}`;
 
         fetch(geocodingUrl)
-            .then(function(response) {
+            .then(function (response) {
                 return response.json();
             })
-            .then(function(data) {
+            .then(function (data) {
                 var latitude = data[0].lat;
                 var longitude = data[0].lon;
                 console.log(longitude);
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 return fetch(weatherURL);
             });
 
-       
+
     });
 });
 
