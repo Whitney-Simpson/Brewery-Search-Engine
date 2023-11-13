@@ -35,3 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //Line 1-35 Weather API functionality
+
