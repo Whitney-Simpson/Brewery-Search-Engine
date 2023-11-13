@@ -37,13 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
+
+
+//This connects the city search btn to the map
 var citySearchBtn = document.getElementById("citySearchBtn").addEventListener('click',function() {
   document.location.href = '#map';
 })
 
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
 function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -33.8688, lng: 151.2195 },
@@ -115,3 +118,5 @@ function initAutocomplete() {
 }
 
 window.initAutocomplete = initAutocomplete;
+
+
