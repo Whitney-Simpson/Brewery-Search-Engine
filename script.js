@@ -1,4 +1,4 @@
-//weather API base funcntionality
+//weather API base functionality
 document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.getElementById("btn");
   const zipcodeInput = document.getElementById("zipCode");
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function (data) {
-        
+
         const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
         const humidity = data.main.humidity; // humidity
         const butfeelsLike = Math.round(1.8 * (data.main.feels_like - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
