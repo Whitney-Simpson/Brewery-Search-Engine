@@ -6,6 +6,18 @@
    height: 500px;
    width: 500px;
    margin: 75px;
+   border-color: black;
+   border-width: 15px;
+   border-radius: 25px;
  }
+
+ #pac-input {
+  width: 150px;
+  height: 30px;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 5px;
+ }
+
 
  
