@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Map lines 7-9 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="module" src="./script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss"></style>
     <title>BreweryZip</title>
@@ -76,10 +80,8 @@
                 href="#"
                 class="block py-2 pl-3 pr-4 text-white text-yellow-500 rounded md:bg-transparent md:text-yellow-500 md:p-0 md:dark:text-yellow-500"
                 aria-current="page"
-                >Home</a
-              >
+                >Home</a>
             </li>
-            <li></li>
             <li>
               <a
                 href="#"
@@ -87,21 +89,40 @@
                 >Contact</a
               >
             </li>
+            <li>
+              <a
+                href="#map"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Map</a
+              >
+            </li>
           </ul>
-        </div>
-      </div>
     </nav>
-    <main>
       <div class="flex flex-wrap gap-4 flex justify-center items-center h-screen -mx-2">
-      <button class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Brewery Search: By Zipcode</button>
+      <button id="citySearchBtn" class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Brewery Search: By City</button>
       <button class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Weather Search: By Zipcode</button>
       </div>
+     
       <div class="box-border h-58 w-32 p-4 border-4 w-screen bg-blue-500 text-center font-extrabold"><section>Trip Details</section></div>
-        <div class="flex flex-wrap gap-4 flex justify-center items-center h-screen -mx-2">
-          <div class="box-border h-58 w-32 p-4 border-4 font-bold w-1/3 bg-purple-200 p-4 w-1/2 w-1/3 bg-blue-200 p-4 border border-gray-300 hover:border-green-500"><section class="inline">Location Details</section></div>
-        <div class="box-border h-58 w-32 p-4 border-4 font-bold w-1/3 bg-orange-600 p-4 w-1/2 w-1/3 bg-blue-200 p-4 border border-gray-300 hover:border-green-500"><section class="inline">Weather Details</section></div>
-      </div>
-    </div>
-    </main>
+      <!--Google Maps lines 109-116-->
+      <section><input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Enter city"
+      />
+      <div id="map"></div>
+</section>
+    <!--Google Maps-->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ_-INX9g599QWR2mqkX7Z3ctcsdSLWAk&callback=initAutocomplete&libraries=places&v=weekly"
+    defer
+  ></script>
+  <!--when page is refreshed it reloads to top of the page-->
+  <script>
+    history.scrollRestoration = "manual";
+</script>
+<!-- <script src="./scriptmap.js"></script> -->
   </body>
 </html>
+
