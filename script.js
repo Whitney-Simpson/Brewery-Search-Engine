@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//This connects the city search btn to the map
+var citySearchBtn = document.getElementById("citySearchBtn").addEventListener('click',function() {
+  document.location.href = '#map';
+})
 
 function weatherWidget (temperature, humidity, butfeelsLike, currentDate, windSpeed, imgCode, cityName) {
  
