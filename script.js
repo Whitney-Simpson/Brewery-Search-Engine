@@ -1,6 +1,5 @@
-
 //weather API base funcntionality
-document.addEventListener("DOMContentLoaded", function () {cdcd
+document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.getElementById("btn");
   const zipcodeInput = document.getElementById("zipCode");
 
@@ -36,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {cdcd
       });
   });
 });
-
-
 
 //This connects the city search btn to the map
 var citySearchBtn = document.getElementById("citySearchBtn").addEventListener('click',function() {
@@ -119,4 +116,4 @@ function initAutocomplete() {
 
 window.initAutocomplete = initAutocomplete;
 
-
+n
