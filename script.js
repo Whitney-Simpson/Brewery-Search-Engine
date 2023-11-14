@@ -1,10 +1,13 @@
 //weather API base functionality
 document.addEventListener("DOMContentLoaded", function () {
-  const searchButton = document.getElementById("weatherButton");
-  const locationInput = document.getElementById("pac-input");
+  const searchButton = document.getElementById("citySearchBtn");
+  const zipcodeInput = document.getElementById("zipCode");
 
   searchButton.addEventListener("click", function (event) {
     event.preventDefault();
+    //This connects the city search btn to the map
+    document.location.href = '#map';
+
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
     const city = locationInput.value;
@@ -75,3 +78,17 @@ function weatherWidget (temperature, humidity, butfeelsLike, currentDate, windSp
   weathercardCont.appendChild(weatherIcon);
   document.body.appendChild(weathercardCont);
 }
+
+function initAutocomplete() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -33.8688, lng: 151.2195 },
+    zoom: 13,
+    mapTypeId: "roadmap",
+  });
+}
+
+const input = document.getElementById("pac-input");
+const searchBox = new google.maps.places.SearchBox(input);
+
+window.initAutocomplete = initAutocomplete;
+
