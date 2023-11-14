@@ -1,6 +1,6 @@
 
 //weather API base funcntionality
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {cdcd
   const searchButton = document.getElementById("btn");
   const zipcodeInput = document.getElementById("zipCode");
 
