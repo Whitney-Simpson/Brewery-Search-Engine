@@ -6,7 +6,7 @@
     <!-- Google Map lines 7-9 -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
-  <script type="text/javascript" src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss"></style>
     <title>BreweryZip</title>
@@ -98,7 +98,28 @@
             </li>
           </ul>
     </nav>
-      <div class="flex flex-wrap gap-4 flex justify-center items-center h-screen -mx-2">
+  <div class="container mx-auto px-4">
+    <div class="box-border h-2000 w-75 p-4 border-4 ...">
+      <div class="columns-2">
+        <br><br>
+        <h1 class="text-6xl font-extrabold">LOOKING FOR A DRINK?</h1><br>
+        <h1 class="text-5xl font-extrabold">- WE CAN HELP!</h1><br><br>
+        <h1 class="text-6xl font-extrabold">NEED TO KNOW THE WEATHER?</h1><br>
+        <h1 class="text-5xl font-extrabold">- WE CAN DO THAT TOO!</h1><br>
+        <img class="w-full" src="./images/Bells2.jpg" alt="cellar at Bell's Brewery">
+      </div>
+    </div>
+  </div>
+  <br>
+  
+    <div class="container mx-auto px-4 grid grid-cols-2 px-8">
+      <!--This is a placeholder IMG-->
+      <img src="./images/Map.jpg" alt="map">
+      <!--This is a placeholder IMG-->
+      <img src="./images/Weather.png" alt="weather forcast">
+    </div>
+  
+    <div class="flex flex-wrap gap-4 flex justify-center items-center h-screen -mx-2">
       <button id="citySearchBtn" class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Brewery Search: By City</button>
       <button class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Weather Search: By Zipcode</button>
       </div>
