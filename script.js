@@ -1,17 +1,17 @@
 //weather API base functionality
 document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.getElementById("weatherButton");
-  const zipcodeInput = document.getElementById("zipCode");
+  const locationInput = document.getElementById("pac-input");
 
   searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
-    const cityInput = zipcodeInput.value;
+    const city = locationInput.value;
     weatherWidget (temperature, humidity, butfeelsLike, currentDate, windSpeed, imgCode, cityName);
     
     // Make the API request to OpenWeatherMap's Geocoding API
-    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=detroit&appid=${apiKey}`;
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     console.log(weatherUrl)
 
     fetch(weatherUrl)
