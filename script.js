@@ -1,12 +1,13 @@
 //weather API base funcntionality
 document.addEventListener("DOMContentLoaded", function () {
-  const searchButton = document.getElementById("btn");
+  const searchButton = document.getElementById("citySearchBtn");
   const zipcodeInput = document.getElementById("zipCode");
 
-  //This connects the city search btn to the map
   searchButton.addEventListener("click", function (event) {
     event.preventDefault();
+    //This connects the city search btn to the map
     document.location.href = '#map';
+
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
     const zipCode = zipcodeInput.value;
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(function (data) {
-
+        
         const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
         const humidity = data.main.humidity; // humidity
         const butfeelsLike = Math.round(1.8 * (data.main.feels_like - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
@@ -37,9 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-
-
-
 
 // This example adds a search box to a map, using the Google Place Autocomplete
 // feature. People can enter geographical searches. The search box will return a
@@ -114,5 +112,5 @@ function initAutocomplete() {
   });
 }
 
-window.initAutocomplete=initAutocomplete
+window.initAutocomplete = initAutocomplete;
 
