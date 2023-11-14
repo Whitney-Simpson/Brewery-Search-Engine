@@ -115,5 +115,3 @@ function initAutocomplete() {
 }
 
 window.initAutocomplete = initAutocomplete;
-
-n
