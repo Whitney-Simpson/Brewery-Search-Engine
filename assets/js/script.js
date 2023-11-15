@@ -94,7 +94,7 @@ function weatherWidget(
   pEl.style.color = "white";
   pEl.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
   pEl.style.borderRadius = "25px";
-  pEl.style.width = "435px";
+  pEl.style.width = "450px";
   pEl.style.padding = "10px";
   pEl.style.position = "absolute";
   pEl.style.left = "55px";
