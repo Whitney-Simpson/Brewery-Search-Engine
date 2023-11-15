@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //This connects the city search btn to the map
   searchButton.addEventListener("click", function (event) {
-    // event.preventDefault();
+    event.preventDefault();
     document.location.href = "#map";
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Make the API request to OpenWeatherMap's Geocoding API
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    console.log(weatherUrl);
+
 
     fetch(weatherUrl)
-      .then(function (response) {
+      .then(function (response,) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
+ 
 
         const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
         const humidity = data.main.humidity; // humidity
@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
           "Wind Speed: " + windSpeed + " mph",
           imgCode,
           cityName
+          
         );
-       clearWeatherCard(weathercardCont);
+       
       
       });
   });
@@ -78,7 +79,7 @@ function weatherWidget(
 
   const ulEl = document.createElement("ul");
   ulEl.style.textAlign = "center";
-  ulEl.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+  ulEl.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
   ulEl.style.width = "275px";
   ulEl.style.borderRadius = "25px";
   ulEl.style.marginLeft = "auto";
@@ -86,9 +87,9 @@ function weatherWidget(
 
   const pEl = document.createElement("p");
   pEl.style.color = "white";
-  pEl.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+  pEl.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
   pEl.style.borderRadius = "25px";
-  pEl.style.width = "450px";
+  pEl.style.width = "475px";
   pEl.style.padding = "10px";
   pEl.style.position = "absolute";
   pEl.style.left = "55px";
@@ -111,7 +112,7 @@ function weatherWidget(
   weathercardCont.id = 'weathercardElement';
   //commented out border currently
   // weathercardCont.style.border = "15px solid black";
-
+  clearWeatherCard(weathercardCont);
   ifskiesShow(weathercardCont, imgCode, pEl, cityName);
 
   const weatherIcon = document.createElement("img");
@@ -139,7 +140,6 @@ function weatherWidget(
 
 
     ulEl.appendChild(liEl);
-    console.log(weatherConditions[i]);
   }
 
  
@@ -157,7 +157,7 @@ function weatherWidget(
 // Function changing the background of the weather card per weather conditions
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
   if (imgCode === "13d" || imgCode === "13n") {
-    weathercardCont.style.backgroundImage = 'url("assets/Images/weather-images/Snow.jpg")';
+    weathercardCont.style.backgroundImage = 'url("assets/Images/weather-images/snow.jpg")';
     pEl.textContent =
       "Currently in " +
       cityName +
@@ -171,21 +171,21 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
       " there is a thunderstorm. Are you afraid? drink about it at a nearby brewery.";
   } else if (imgCode === "09d" || imgCode === "09n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/rainCity.jpg")';
+      'url("assets/Images/weather-images/rainyCity.jpg")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " it is raining. Stay dry and grab a drink at a nearby brewery. ";
   } else if (imgCode === "10d" || imgCode === "10n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/rainCity.jpg")';
+      'url("assets/Images/weather-images/rainyCity.jpg")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " it is raining. Stay dry and grab a drink at a nearby brewery. ";
   } else if (imgCode === "50d" || imgCode === "50n") {
     weathercardCont.style.backgroundImage =
-      'url("weather-images/notVisible.jpg")';
+      'url("assets/Images/weather-images/notVisible.jpg")';
     pEl.textContent =
       "Currently in " +
       cityName +
@@ -193,7 +193,7 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
     // Visibility low
   } else if (imgCode === "01d" || imgCode === "01n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/Clearsky.jpg")';
+      'url("assets/Images/weather-images/clearSkies.jpg")';
     pEl.textContent =
       "Currently in " +
       cityName +
