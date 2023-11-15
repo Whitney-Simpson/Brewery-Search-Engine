@@ -52,12 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-// This connects the city search btn to the map
-
-// var citySearchBtn = document.getElementById("citySearchBtn").addEventListener('click',function() {
-//   document.location.href = '#map';
-// })
-
 //the function creating the weather card using createElement and stylizing
 function weatherWidget(
   temperature,
@@ -240,19 +234,6 @@ function clearWeatherCard(weathercardCont) {
   }
 }
 
-// This example adds a search box to a map, using the Google Place Autocomplete
-// feature. People can enter geographical searches. The search box will return a
-// pick list containing a mix of places and predicted search terms.
-function initAutocomplete() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -33.8688, lng: 151.2195 },
-    zoom: 13,
-    mapTypeId: "roadmap",
-  });
-}
-
-window.initAutocomplete = initAutocomplete;
-
 // Script for IMG Slide Show
 var index = 0;
 displayImages();
@@ -269,3 +250,4 @@ function displayImages() {
   images[index - 1].style.display = "block";
   setTimeout(displayImages, 2000);
 }
+
