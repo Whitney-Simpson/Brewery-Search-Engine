@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //This connects the city search btn to the map
   searchButton.addEventListener("click", function (event) {
-    // event.preventDefault();
+    event.preventDefault();
     document.location.href = "#map";
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Make the API request to OpenWeatherMap's Geocoding API
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-    console.log(weatherUrl);
+
 
     fetch(weatherUrl)
       .then(function (response,) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data);
+ 
 
         const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
         const humidity = data.main.humidity; // humidity
@@ -140,7 +140,6 @@ function weatherWidget(
 
 
     ulEl.appendChild(liEl);
-    console.log(weatherConditions[i]);
   }
 
  
