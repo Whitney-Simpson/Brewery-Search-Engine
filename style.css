@@ -21,7 +21,11 @@
 .text-1st-block {
     font-size: larger;
 }
-
+/*button styling for margin and padding*/
+#buttons {
+    padding: 25px;
+    margin: 50px;
+}
 /* stlying for slide show (lines 27-40) */
 
 .image-slideshow {
