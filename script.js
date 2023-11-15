@@ -3,11 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.getElementById("citySearchBtn");
   const locationInput = document.getElementById("pac-input");
 
+  //This connects the city search btn to the map
   searchButton.addEventListener("click", function (event) {
     event.preventDefault();
-    //This connects the city search btn to the map
     document.location.href = '#map';
-
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
     const city = locationInput.value;
@@ -23,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then(function (data) {
         console.log(data)
+
         const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
         const humidity = data.main.humidity; // humidity
         const butfeelsLike = Math.round(1.8 * (data.main.feels_like - 273) + 32) ; //converts celvin to farenheit and rounds to nearest integer
@@ -44,8 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 });
-// weatherWidget (temperature, humidity, butfeelsLike, currentDate, windSpeed, imgCode, cityName);
-//This connects the city search btn to the map
+weatherWidget (temperature, humidity, butfeelsLike, currentDate, windSpeed, imgCode, cityName);
+// This connects the city search btn to the map
+
 // var citySearchBtn = document.getElementById("citySearchBtn").addEventListener('click',function() {
 //   document.location.href = '#map';
 // })
@@ -101,7 +102,7 @@ ulEl.style.textAlign = 'center';
   weathercardCont.style.height = '500px';
   weathercardCont.style.position = 'absolute';
   weathercardCont.style.left = '800px';
-  weathercardCont.style.top = '1125px';
+  weathercardCont.style.top = '3040px';
   weathercardCont.style.borderRadius = '25px';
   weathercardCont.style.border = '15px solid black'
 
@@ -117,6 +118,7 @@ ulEl.style.textAlign = 'center';
   weatherIcon.style.position = 'absolute';
 weatherIcon.style.top = '380px';
 weatherIcon.style.left = '85px';
+weatherIcon.style.width = '100px';
 
   const weatherConditions = [temperature,  butfeelsLike, humidity, windSpeed]
 
@@ -150,23 +152,23 @@ weathercardCont.appendChild( pEl);
 
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
   if (imgCode === "13d" || imgCode === "13n") {
-    weathercardCont.style.backgroundImage = 'url("weather-images/2735406.jpg")';
+    weathercardCont.style.backgroundImage = 'url("weather-images/snowyy.jpg")';
     pEl.textContent = "Currently in " + cityName + " it is snowing. Grab a drink and stay warm at a nearby brewery. "
   } else if (imgCode === "11d" || imgCode === "11n") {
     weathercardCont.style.backgroundImage = 'url("weather-images/thunderstorm.jpg")';
     pEl.textContent = "Currently in " + cityName + " there is a thunderstorm. Are you afraid? drink about it at a nearby brewery."
   } else if (imgCode === "09d" || imgCode === "09n") {
-    weathercardCont.style.backgroundImage = 'url("weather-images/rain.jpg")';
+    weathercardCont.style.backgroundImage = 'url("weather-images/washingtonRain.jpg")';
     pEl.textContent = "Currently in " + cityName + " it is raining. Stay dry and grab a drink at a nearby brewery. "
   } else if (imgCode === "10d" || imgCode === "10n") {
-    weathercardCont.style.backgroundImage = 'url("weather-images/rain.jpg")';
+    weathercardCont.style.backgroundImage = 'url("weather-images/washingtonRain.jpg")';
     pEl.textContent = "Currently in " + cityName + " it is raining. Stay dry and grab a drink at a nearby brewery. "
   } else if (imgCode === "50d" || imgCode === "50n") {
-    weathercardCont.style.backgroundImage = 'url("weather-images/lowVisibility.avif")';
+    weathercardCont.style.backgroundImage = 'url("weather-images/notVisible.jpg")';
     pEl.textContent = "Currently in " + cityName + " there is low visibility or hazardous conditions. Stay safe at a nearby brewery. "
     // Visibility low
   } else if (imgCode === "01d" || imgCode === "01n") {
-    weathercardCont.style.backgroundImage = 'url("weather-images/Clearskies.webp")';
+    weathercardCont.style.backgroundImage = 'url("weather-images/clearlySky.jpg")';
     pEl.textContent = "Currently in " + cityName + " the skies are clear. Enjoy the clear skies and grab a drink at a brewery. "
   } else if (imgCode === "02d" || imgCode === "02n") {
     weathercardCont.style.backgroundImage = 'url("weather-images/Fewclouds.jpg")';
@@ -174,11 +176,17 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
     weathercardCont.style.backgroundImage = 'url("weather-images/scatteredClouds.jpg")';
     pEl.textContent = "Currently in " + cityName + " there are scattered clouds. It's a perfect day to enjoy the indoors at a brewery. "
   } else if (imgCode === "04d" || imgCode === "04n") {
-    weathercardCont.style.backgroundImage = 'url("weather-images/overcast.jpg")';
+    weathercardCont.style.backgroundImage = 'url("weather-images/castOver.jpg")';
     pEl.textContent =  pEl.textContent = "Currently in " + cityName + " there is an overcast. It's a perfect day to be indoors and visit a brewery. "
   }
 }
 
+
+
+
+// This example adds a search box to a map, using the Google Place Autocomplete
+// feature. People can enter geographical searches. The search box will return a
+// pick list containing a mix of places and predicted search terms.
 function initAutocomplete() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: -33.8688, lng: 151.2195 },
@@ -187,8 +195,21 @@ function initAutocomplete() {
   });
 }
 
-const input = document.getElementById("pac-input");
-const searchBox = new google.maps.places.SearchBox(input);
+window.initAutocomplete=initAutocomplete
 
-window.initAutocomplete = initAutocomplete;
-
+// Script for IMG Slide Show
+var index = 0;
+displayImages();
+function displayImages() {
+  let i;
+  const images = document.getElementsByClassName("image");
+  for (i = 0; i < images.length; i++) {
+    images[i].style.display = "none";
+  }
+  index++;
+  if (index > images.length) {
+    index = 1;
+  }
+  images[index-1].style.display = "block";
+  setTimeout(displayImages, 2000); 
+}
