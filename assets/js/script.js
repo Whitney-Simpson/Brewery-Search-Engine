@@ -51,11 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-// This connects the city search btn to the map
-
-// var citySearchBtn = document.getElementById("citySearchBtn").addEventListener('click',function() {
-//   document.location.href = '#map';
-// })
 
 //the function creating the weather card using createElement and stylizing
 function weatherWidget(
@@ -237,21 +232,4 @@ function clearWeatherCard(weathercardCont) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
-}
-
-// Script for IMG Slide Show
-var index = 0;
-displayImages();
-function displayImages() {
-  let i;
-  const images = document.getElementsByClassName("image");
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
-  }
-  index++;
-  if (index > images.length) {
-    index = 1;
-  }
-  images[index - 1].style.display = "block";
-  setTimeout(displayImages, 2000);
 }
