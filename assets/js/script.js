@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.getElementById("citySearchBtn");
   const locationInput = document.getElementById("pac-input");
 
-  //This connects the city search btn to the map
+  // This connects the city search btn to the map
   searchButton.addEventListener("click", function (event) {
     event.preventDefault();
     document.location.href = "#map";
@@ -147,7 +147,7 @@ function weatherWidget(
 
   weathercardCont.appendChild(weatherIcon);
   mapWeatherdata.appendChild(weathercardCont);
-}
+};
 
 // Function changing the background of the weather card per weather conditions
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
@@ -216,7 +216,7 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
       cityName +
       " there is an overcast. It's a perfect day to be indoors and visit a brewery. ";
   }
-}
+};
 
 //function preventing stacking bug of cards upon click
 function clearWeatherCard(weathercardCont) {
@@ -226,21 +226,4 @@ function clearWeatherCard(weathercardCont) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
-}
-
-// Script for IMG Slide Show
-var index = 0;
-displayImages();
-function displayImages() {
-  let i;
-  const images = document.getElementsByClassName("image");
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
-  }
-  index++;
-  if (index > images.length) {
-    index = 1;
-  }
-  images[index - 1].style.display = "block";
-  setTimeout(displayImages, 2000);
-}
+};
