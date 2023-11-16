@@ -5,16 +5,13 @@
 ![Alt text](image.png)
 
 
-# USER STORY
-I am going on vacation and would like to know where all nearby breweies are located. I would also like to be able to look at the weather forecast for where the brewery is located.
-
-
 # User Story (Heinz Edit)
 As a Beer Lover, I want to seek out different breweies based on the city I am in or visiting, get their location on a map, and know the weather at said brewery. End user goal: Find a brewery in the city I am searching and know the weather forcast. End business goal: Provide beer lovers with a searching tool to find different breweries and know the weather.
 
 
 # ACCEPTANCE CRITERIA
 * **GIVEN**: A webpage with brewery location and weather information.
+
 * **WHEN** I enter the city in the map,
   * **Then** I am presented with nearby breweries and the weather forecast.
 * **When** I click on the contacts link,
@@ -50,7 +47,8 @@ As a Beer Lover, I want to seek out different breweies based on the city I am in
 
 
 # Third Party API's
-We used ____ different Third Party API's for this prioject:
+We used three different Third Party API's for this prioject:
 1) [tailwindcss](https://tailwindcss.com/)
-2) 
-3) 
+2) [Google Maps](https://developers.google.com/maps/documentation/javascript/overview)
+3) [Weather App](https://openweathermap.org/api)
+4) [Day JS](https://day.js.org/en/)
