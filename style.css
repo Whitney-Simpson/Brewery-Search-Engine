@@ -1,14 +1,24 @@
 body{
     background-image: linear-gradient(white, orange);
+   
 }
 
 
 .contact-p {
     margin: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
-.h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+h1, h2{
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+p{
+    text-align: center;
+}
+
+a:link{
+    color: gray;
 }
