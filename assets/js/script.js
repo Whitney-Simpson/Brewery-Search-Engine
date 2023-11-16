@@ -14,14 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Make the API request to OpenWeatherMap's Geocoding API
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
-
     fetch(weatherUrl)
-      .then(function (response,) {
+      .then(function (response) {
         return response.json();
       })
       .then(function (data) {
- 
-
         const temperature = Math.round(1.8 * (data.main.temp - 273) + 32); //converts celvin to farenheit and rounds to nearest integer
         const humidity = data.main.humidity; // humidity
         const butfeelsLike = Math.round(
@@ -45,20 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
           "Wind Speed: " + windSpeed + " mph",
           imgCode,
           cityName
-          
         );
-       
-      
       });
-    });
-    locationInput.addEventListener('keyup', function (event) {
-
-      if (event.key === 'Enter') {
-    
-        searchButton.click();
-      }
-    })
-    
+  });
+  locationInput.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      searchButton.click();
+    }
+  });
 });
 //the function creating the weather card using createElement and stylizing
 function weatherWidget(
@@ -107,17 +98,17 @@ function weatherWidget(
   pEl.style.fontFamily = "Raleway, sans-serif";
   pEl.style.fontSize = "18px";
 
+  const mapWeatherdata = document.getElementById("mapWeatherdata");
 
   const weathercardCont = document.createElement("div");
   weathercardCont.style.backgroundSize = "cover"; // Adjust this property as needed
   weathercardCont.style.backgroundRepeat = "no-repeat";
   weathercardCont.style.width = "550px";
   weathercardCont.style.height = "500px";
-  weathercardCont.style.position = "absolute";
-  weathercardCont.style.left = "800px";
-  weathercardCont.style.top = "1675px";
+  weathercardCont.style.position = "relative";
+  weathercardCont.style.margin = "75px";
   weathercardCont.style.borderRadius = "25px";
-  weathercardCont.id = 'weathercardElement';
+  weathercardCont.id = "weathercardElement";
   //commented out border currently
   // weathercardCont.style.border = "15px solid black";
   clearWeatherCard(weathercardCont);
@@ -145,12 +136,8 @@ function weatherWidget(
     liEl.style.padding = "10px";
     liEl.style.fontFamily = "Raleway, sans-serif";
 
-
-
     ulEl.appendChild(liEl);
   }
-
- 
 
   weathercardCont.appendChild(h2El);
   weathercardCont.appendChild(h3El);
@@ -159,13 +146,14 @@ function weatherWidget(
   weathercardCont.appendChild(pEl);
 
   weathercardCont.appendChild(weatherIcon);
-  document.body.appendChild(weathercardCont);
+  mapWeatherdata.appendChild(weathercardCont);
 }
 
 // Function changing the background of the weather card per weather conditions
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
   if (imgCode === "13d" || imgCode === "13n") {
-    weathercardCont.style.backgroundImage = 'url("assets/Images/weather-images/snow.jpg")';
+    weathercardCont.style.backgroundImage =
+      'url("assets/Images/weather-images/snow.jpg")';
     pEl.textContent =
       "Currently in " +
       cityName +
@@ -209,11 +197,10 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
   } else if (imgCode === "02d" || imgCode === "02n") {
     weathercardCont.style.backgroundImage =
       'url("assets/Images/weather-images/aFewclouds.jpg")';
-      pEl.textContent =
+    pEl.textContent =
       "Currently in " +
       cityName +
       " there are a few clouds. It's a perfect day to enjoy the indoors at a brewery. ";
-
   } else if (imgCode === "03d" || imgCode === "03n") {
     weathercardCont.style.backgroundImage =
       'url("assets/Images/weather-images/scatteredClouds.jpg")';
@@ -233,15 +220,13 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
 
 //function preventing stacking bug of cards upon click
 function clearWeatherCard(weathercardCont) {
-  const existingWeatherCard = document.getElementById('weathercardElement');
+  const existingWeatherCard = document.getElementById("weathercardElement");
 
   if (existingWeatherCard) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
 }
-
-
 
 // Script for IMG Slide Show
 var index = 0;
@@ -259,4 +244,3 @@ function displayImages() {
   images[index - 1].style.display = "block";
   setTimeout(displayImages, 2000);
 }
-
