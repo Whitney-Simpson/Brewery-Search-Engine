@@ -50,7 +50,15 @@ document.addEventListener("DOMContentLoaded", function () {
        
       
       });
-  });
+    });
+    locationInput.addEventListener('keyup', function (event) {
+
+      if (event.key === 'Enter') {
+    
+        searchButton.click();
+      }
+    })
+    
 });
 //the function creating the weather card using createElement and stylizing
 function weatherWidget(
@@ -232,6 +240,8 @@ function clearWeatherCard(weathercardCont) {
     existingWeatherCard.remove();
   }
 }
+
+
 
 // Script for IMG Slide Show
 var index = 0;
