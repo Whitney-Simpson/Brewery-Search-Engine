@@ -8,7 +8,15 @@
     border-color: black;
     border-width: 15px;
     border-radius: 25px;
+    min-width: 500px;
+
 }
+
+#mapWeatherdata {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}git 
 
 #pac-input {
     width: 150px;
