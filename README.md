@@ -36,7 +36,7 @@ As a Beer Lover, I want to seek out different breweies based on the city I am in
   * GitHub: [TheOarsman](https://github.com/TheOarsman)
 
 
-# Creteria for this Project
+# Criteria for this Project
 * Use a CSS framework other than Bootstrap.
 * Be deployed to GitHub Pages.
 * Be interactive (i.e., accept and respond to user input).

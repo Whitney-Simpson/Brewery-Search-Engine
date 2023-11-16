@@ -32,8 +32,8 @@
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BreweryZip</span>
       </a>
       <div class="flex md:order-2">
-        <button type="button"
-          class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:">
+        <!-- <button type="button" -->
+          <!-- class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:"> -->
           Get started
         </button>
         <button data-collapse-toggle="navbar-sticky" type="button"
@@ -55,7 +55,7 @@
               aria-current="page">Home</a>
           </li>
           <li>
-            <a href="./contact.html"
+            <a href="#"
               class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
           </li>
           <li>
@@ -98,20 +98,11 @@
     </div>
   </div>
   <br>
-  <div class="flex flex-wrap gap-4 flex justify-center items-center">
-    <button id="citySearchBtn"
-      class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Brewery
-      Search: By City</button>
-    <button
-      class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Weather
-      Search: By Zipcode</button>
-  </div>
-
   <div class="box-border h-58 w-32 p-4 border-4 w-screen bg-blue-500 text-center font-extrabold">
     <section>Trip Details</section>
   </div>
   <!--Google Maps lines 109-116-->
-  <section id="mapWeatherdata"><input id="pac-input" class="controls" type="text" placeholder="Enter city" />
+  <section><input id="pac-input" class="controls" type="text" placeholder="Enter city" />
     <div id="map"></div>
   </section>
   <!--Google Maps-->
@@ -125,7 +116,6 @@
   <!-- <script src="./scriptmap.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4"></script>
   <!-- this is a dayjs url for weather API pls do not delete -->
-  <script src ='assets\js\script.js'></script>
 </body>
 
 </html>
