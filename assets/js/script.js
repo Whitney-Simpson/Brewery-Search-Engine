@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var apiKey = "a1c24f9ef9bb705299a22d8524be3474 ";
 
     const city = locationInput.value;
-
+    //below is the localStorage that attaches to the scriptstorage
+    localStorage.setItem("city", city);
     // Make the API request to OpenWeatherMap's Geocoding API
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
