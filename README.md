@@ -2,7 +2,8 @@
 ## "Looking for a Brewery? We can help! Need to know the weather? We can do that to!"
 
 
-![Alt text](image.png)
+![Alt text](image-1.png)
+![Alt text](image-2.png)
 
 
 # User Story (Heinz Edit)
