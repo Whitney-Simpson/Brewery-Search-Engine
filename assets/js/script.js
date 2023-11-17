@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   locationInput.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
+      event.preventDefault();
       searchButton.click();
     }
   });
@@ -68,6 +69,7 @@ function weatherWidget(
   h2El.style.color = "white";
   h2El.style.textAlign = "center";
   h2El.style.fontSize = "40px";
+  h2El.style.fontWeight = "bold";
 
   const h3El = document.createElement("h3");
   h3El.textContent = "Current Weather Conditions in " + cityName;
@@ -76,6 +78,7 @@ function weatherWidget(
   h3El.style.textAlign = "center";
   h3El.style.fontSize = "30px";
   h3El.style.width = "500px";
+  h3El.style.fontWeight = "bold";
 
   const ulEl = document.createElement("ul");
   ulEl.style.textAlign = "center";
@@ -84,10 +87,14 @@ function weatherWidget(
   ulEl.style.borderRadius = "25px";
   ulEl.style.marginLeft = "auto";
   ulEl.style.marginRight = "auto";
+  ulEl.style.backgroundSize = "cover";
+  ulEl.style.backgroundRepeat = "no-repeat";
+  ulEl.style.backgroundImage =
+    'url("assets/Images/weather-images/woodBackground.jpg")';
 
   const pEl = document.createElement("p");
   pEl.style.color = "white";
-  pEl.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+  pEl.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
   pEl.style.borderRadius = "25px";
   pEl.style.width = "475px";
   pEl.style.padding = "10px";
@@ -98,8 +105,12 @@ function weatherWidget(
   pEl.style.paddingBottom = "0";
   pEl.style.fontFamily = "Raleway, sans-serif";
   pEl.style.fontSize = "18px";
+  pEl.style.fontWeight = "bold";
 
-  const mapWeatherdata = document.getElementById("mapWeatherdata");
+  pEl.style.backgroundSize = "cover";
+  pEl.style.backgroundRepeat = "no-repeat";
+  pEl.style.backgroundImage =
+    'url("assets/Images/weather-images/woodBackground.jpg")';
 
   const weathercardCont = document.createElement("div");
   weathercardCont.style.backgroundSize = "cover"; // Adjust this property as needed
@@ -107,11 +118,13 @@ function weatherWidget(
   weathercardCont.style.width = "550px";
   weathercardCont.style.height = "500px";
   weathercardCont.style.position = "relative";
-  weathercardCont.style.margin = "75px";
   weathercardCont.style.borderRadius = "25px";
+  weathercardCont.style.right = "200px";
+  weathercardCont.style.boxShadow = "20px 20px 20px rgba(0, 0, 0, 0.8)";
   weathercardCont.id = "weathercardElement";
+
   //commented out border currently
-  // weathercardCont.style.border = "15px solid black";
+  // weathercardCont.style.border = "8px solid black";
   clearWeatherCard(weathercardCont);
   ifskiesShow(weathercardCont, imgCode, pEl, cityName);
 
@@ -136,6 +149,7 @@ function weatherWidget(
     liEl.style.fontSize = "24px";
     liEl.style.padding = "10px";
     liEl.style.fontFamily = "Raleway, sans-serif";
+    liEl.style.fontWeight = "bold";
 
     ulEl.appendChild(liEl);
   }
@@ -154,35 +168,35 @@ function weatherWidget(
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
   if (imgCode === "13d" || imgCode === "13n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/snow.jpg")';
+      'url("assets/Images/weather-images/snowCity.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " it is snowing. Grab a drink and stay warm at a nearby brewery. ";
   } else if (imgCode === "11d" || imgCode === "11n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/thunderStorm.jpg")';
+      'url("assets/Images/weather-images/Lightning.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " there is a thunderstorm. Are you afraid? drink about it at a nearby brewery.";
   } else if (imgCode === "09d" || imgCode === "09n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/rainyCity.jpg")';
+      'url("assets/Images/weather-images/cityRain.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " it is raining. Stay dry and grab a drink at a nearby brewery. ";
   } else if (imgCode === "10d" || imgCode === "10n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/rainyCity.jpg")';
+      'url("assets/Images/weather-images/cityRain.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " it is raining. Stay dry and grab a drink at a nearby brewery. ";
   } else if (imgCode === "50d" || imgCode === "50n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/notVisible.jpg")';
+      'url("assets/Images/weather-images/lowVis.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
@@ -190,28 +204,28 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
     // Visibility low
   } else if (imgCode === "01d" || imgCode === "01n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/clearSkies.jpg")';
+      'url("assets/Images/weather-images/skiesClear.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " the skies are clear. Enjoy the clear skies and grab a drink at a brewery. ";
   } else if (imgCode === "02d" || imgCode === "02n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/aFewclouds.jpg")';
+      'url("assets/Images/weather-images/fewCloudy.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " there are a few clouds. It's a perfect day to enjoy the indoors at a brewery. ";
   } else if (imgCode === "03d" || imgCode === "03n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/scatteredClouds.jpg")';
+      'url("assets/Images/weather-images/scattered.png")';
     pEl.textContent =
       "Currently in " +
       cityName +
       " there are scattered clouds. It's a perfect day to enjoy the indoors at a brewery. ";
   } else if (imgCode === "04d" || imgCode === "04n") {
     weathercardCont.style.backgroundImage =
-      'url("assets/Images/weather-images/overCast.jpg")';
+      'url("assets/Images/weather-images/overCast.png")';
     pEl.textContent = pEl.textContent =
       "Currently in " +
       cityName +
@@ -227,14 +241,13 @@ function clearWeatherCard(weathercardCont) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
-<<<<<<< Updated upstream
-=======
 
 }
 
 
 function dataBackground(mapWeatherdata) {
-  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground.jpg")';
+
+  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground.jpg")'; 
   mapWeatherdata.style.backgroundSize = "cover"; // Adjust this property as needed
   mapWeatherdata.style.backgroundRepeat = "no-repeat";
 }
@@ -243,4 +256,4 @@ dataBackground(mapWeatherdata);
 
 
 
->>>>>>> Stashed changes
+
