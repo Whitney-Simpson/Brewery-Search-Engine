@@ -55,7 +55,7 @@
               aria-current="page">Home</a>
           </li>
           <li>
-            <a href="./contact.html"
+            <a href="#"
               class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
           </li>
           <li>
@@ -107,13 +107,17 @@
       Search: By Zipcode</button>
   </div>
 
-  <div class="box-border h-58 w-32 p-4 border-4 w-screen bg-blue-500 text-center font-extrabold">
+  <div class="box-border h-58 w-32 p-4 border-4 w-screen bg-blue-500 text-center font-extrabold" id ="tripDetails">
     <section>Trip Details</section>
   </div>
   <!--Google Maps lines 109-116-->
-  <section id="mapWeatherdata"><input id="pac-input" class="controls" type="text" placeholder="Enter city" />
+  <section id="mapWeatherdata">
+  
+    <input id="pac-input" class="controls" type="text" placeholder="Enter city" />
+
     <div id="map"></div>
   </section>
+ 
   <!--Google Maps-->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ_-INX9g599QWR2mqkX7Z3ctcsdSLWAk&callback=initAutocomplete&libraries=places&v=weekly"
