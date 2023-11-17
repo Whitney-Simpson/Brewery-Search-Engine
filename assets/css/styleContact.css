@@ -1,6 +1,6 @@
-body{
+body {
     background-image: linear-gradient(white, orange);
-   
+
 }
 
 
@@ -9,16 +9,17 @@ body{
     padding-bottom: 15px;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: sans-serif;
     text-align: center;
 
 }
 
-p{
+p {
     text-align: center;
 }
 
-a:link{
+a:link {
     color: gray;
 }
