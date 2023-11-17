@@ -63,15 +63,6 @@
         </ul>
   </nav>
   <div class="container mx-auto px-4">
-
-    <div class="p-4 ">
-      <div class="columns-2">
-        <div class="text-left" class="text-box">
-        <p class="text-6xl font-extrabold">LOOKING FOR A DRINK?</p><br>
-        <p class="text-5xl font-extrabold">- WE CAN HELP!</p><br>
-        <p class="text-6xl font-extrabold">NEED TO KNOW THE WEATHER?</p><br>
-        <p class="text-5xl font-extrabold">- WE CAN DO THAT TOO!</p><br>
-
     <div class="p-4">
       <div class="columns-2">
         <div class="text-left" class="text-box">
@@ -79,7 +70,6 @@
           <p class="text-5xl font-extrabold">- WE CAN HELP!</p><br>
           <p class="text-6xl font-extrabold">NEED TO KNOW THE WEATHER?</p><br>
           <p class="text-5xl font-extrabold">- WE CAN DO THAT TOO!</p><br>
-
         </div>
         <!-- IMGs for Slide Show -->
         <div class="image-slideshow">
@@ -125,14 +115,15 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ_-INX9g599QWR2mqkX7Z3ctcsdSLWAk&callback=initAutocomplete&libraries=places&v=weekly"
     defer></script>
-    <div class="flex flex-wrap gap-4 flex justify-center items-center">
-      <button id="pastCitySearchBtn"
-        class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Past City Searches</button>
-    </div>
-    <div id="msg"></div>
-      <p id="recentCity">City:</p>
-   
-    <script src="./assets/js/scriptstorage.js"></script>
+  <div class="flex flex-wrap gap-4 flex justify-center items-center">
+    <button id="pastCitySearchBtn"
+      class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Past
+      City Searches</button>
+  </div>
+  <div id="msg"></div>
+  <p id="recentCity">City:</p>
+
+  <script src="./assets/js/scriptstorage.js"></script>
   <!--when page is refreshed it reloads to top of the page-->
   <script>
     history.scrollRestoration = "manual";
