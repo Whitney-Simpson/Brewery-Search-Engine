@@ -14,4 +14,6 @@ function displayImages() {
   }
   images[index - 1].style.display = "block";
   setTimeout(displayImages, 2000);
-}
+};
+
+
