@@ -227,4 +227,3 @@ function clearWeatherCard(weathercardCont) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
-};
