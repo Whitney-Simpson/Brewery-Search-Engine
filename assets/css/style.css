@@ -31,7 +31,6 @@
 }
 
 /* stlying for slide show (lines 27-40) */
-
 .image-slideshow {
     max-width: 1000px;
     position: relative;
@@ -45,7 +44,7 @@ img {
 
 .image .fade {
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 
 /* screen sizing */
