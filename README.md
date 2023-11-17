@@ -11,14 +11,20 @@ As a Beer Lover, I want to seek out different breweies based on the city I am in
 
 
 # ACCEPTANCE CRITERIA
-* **GIVEN**: A webpage with brewery location and weather information.
+* **Given**: A webpage with brewery location and weather information.
 
-* **WHEN** I enter the city in the map,
+* **When** I enter the city in the map,
   * **Then** I am presented with nearby breweries and the weather forecast.
 * **When** I click on the contacts link,
   * **Then** I am shown the contact information of the website.
-* **When** I enter my name and email address,
-  * **Then** my information is stored in local storage.
+* **When** I enter the city in the search bar,
+  * **Then** the map displays said city.
+* **When** I press enter after typing city in the search bar,  
+  * **Then** the weather is displayed for said city and the search is saved in local storage.
+* **When** I click the *Past City Searches* button,
+  * **Then** the most recent search is displayed at the bottom of the screen.
+* **When** I refresh the page,
+  * **Then** the previous city search is displayed.
 
 
 # Authors and Developers
