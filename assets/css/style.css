@@ -13,10 +13,19 @@
 }
 
 #mapWeatherdata {
+<<<<<<< Updated upstream
     display: flex;
     flex-direction: row;
     justify-content: center;
 }git 
+=======
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+>>>>>>> Stashed changes
 
 #pac-input {
     width: 150px;
@@ -44,8 +53,19 @@ img {
 
 
 .image .fade {
+<<<<<<< Updated upstream
     animation-name: fade;
     animation-duration: 2s;
+=======
+
+
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+#pac-input::placeholder {
+  color: white;
+>>>>>>> Stashed changes
 }
 
 /* screen sizing */
