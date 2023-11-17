@@ -46,13 +46,15 @@ img {
 
 .image .fade {
 
-  animation-name: fade;
-  animation-duration: 2s;
-}
+    animation-name: fade;
+    animation-duration: 2s;
+
 
 #pac-input::placeholder {
   color: white;
+
 }
+
 
 /* screen sizing */
 

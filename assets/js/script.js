@@ -246,13 +246,14 @@ function clearWeatherCard(weathercardCont) {
 
 
 function dataBackground(mapWeatherdata) {
-  mapWeatherdata.style.backgroundImage =
-    'url("assets/Images/weather-images/tripBackground.jpg")';
+
+  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground.jpg")'; 
   mapWeatherdata.style.backgroundSize = "cover"; // Adjust this property as needed
   mapWeatherdata.style.backgroundRepeat = "no-repeat";
 }
 
 dataBackground(mapWeatherdata);
 
-};
+
+
 
