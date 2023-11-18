@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(white, orange);
+    height: 100vh;
 
 }
 
@@ -7,6 +8,10 @@ body {
 .contact-p {
     margin: 20px;
     padding-bottom: 15px;
+}
+
+.container h1 {
+    font-size: 40px;
 }
 
 h1,
