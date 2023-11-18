@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "Enter") {
       event.preventDefault();
       searchButton.click();
-      document.location.href = "#mapWeatherdata"; // to prevent page from going to recent searches after clicking enter
     }
   });
 });
@@ -248,12 +247,13 @@ function clearWeatherCard(weathercardCont) {
 
 function dataBackground(mapWeatherdata) {
 
-  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground1.png")'; 
-  mapWeatherdata.style.backgroundSize = "cover";
+  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground.jpg")'; 
+  mapWeatherdata.style.backgroundSize = "cover"; // Adjust this property as needed
   mapWeatherdata.style.backgroundRepeat = "no-repeat";
 }
 
 dataBackground(mapWeatherdata);
+
 
 
 

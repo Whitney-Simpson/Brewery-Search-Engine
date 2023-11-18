@@ -48,33 +48,12 @@ img {
 
     animation-name: fade;
     animation-duration: 2s;
-}
+
 
 #pac-input::placeholder {
   color: white;
-  font-size: 16px;
-  font-style: italic;
- 
 
 }
-
-#citySearchBtn {
-    display: none;
-  }
-
-  .container {
-    height: 900px;
-  }
-
- .p-4 button {
-    font-size: 50px;
-    text-align: 'center';
-    max-width: 600px;
-    color: white;
-    font-family:  "Raleway", "sans-serif";
-  } 
-
-
 
 
 /* screen sizing */
@@ -84,5 +63,3 @@ img {
 @media screen and (max-width: 768px) {}
 
 @media screen and (max-width: 576px) {}
-
-
