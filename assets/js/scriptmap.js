@@ -29,6 +29,7 @@ function initAutocomplete() {
     'url("assets/Images/weather-images/inputBackground.jpg")';
   input.style.boxShadow = "20px 20px 20px rgba(0, 0, 0, 0.8)";
   input.style.color = "white";
+  input.style.borderRadius = '10px';
 
   const searchBox = new google.maps.places.SearchBox(input);
   // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
