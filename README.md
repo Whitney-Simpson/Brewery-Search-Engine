@@ -14,8 +14,8 @@ As a Beer Lover, I want to seek out different breweies based on the city I am in
 
 * **WHEN** I enter the city in the map,
   * **Then** I am presented with nearby breweries and the weather forecast.
-* **When** I click on the contacts link,
-  * **Then** I am shown the contact information of the website.
+* **When** I click on the s link,
+  * **Then** I am shown the  information of the website.
 * **When** I enter my name and email address,
   * **Then** my information is stored in local storage.
 
