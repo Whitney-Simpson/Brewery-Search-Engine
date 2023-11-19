@@ -163,7 +163,7 @@ function weatherWidget(
 
   weathercardCont.appendChild(weatherIcon);
   mapWeatherdata.appendChild(weathercardCont);
-};
+}
 
 // Function changing the background of the weather card per weather conditions
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
@@ -232,7 +232,7 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
       cityName +
       " there is an overcast. It's a perfect day to be indoors and visit a brewery. ";
   }
-};
+}
 
 //function preventing stacking bug of cards upon click
 function clearWeatherCard(weathercardCont) {
@@ -242,18 +242,13 @@ function clearWeatherCard(weathercardCont) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
-
 }
 
-
 function dataBackground(mapWeatherdata) {
-
-  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground1.png")'; 
+  mapWeatherdata.style.backgroundImage =
+    'url("assets/Images/weather-images/tripBackground1.png")';
   mapWeatherdata.style.backgroundSize = "cover";
   mapWeatherdata.style.backgroundRepeat = "no-repeat";
 }
 
 dataBackground(mapWeatherdata);
-
-
-

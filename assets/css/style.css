@@ -45,44 +45,39 @@ img {
 }
 
 .image .fade {
-
-    animation-name: fade;
-    animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
 }
 
 #pac-input::placeholder {
   color: white;
   font-size: 16px;
   font-style: italic;
- 
-
 }
 
 #citySearchBtn {
-    display: none;
-  }
+  display: none;
+}
 
-  .container {
-    height: 900px;
-  }
+.container {
+  height: 900px;
+}
 
- .p-4 button {
-    font-size: 50px;
-    text-align: 'center';
-    max-width: 600px;
-    color: white;
-    font-family:  "Raleway", "sans-serif";
-  } 
-
-
-
+.p-4 button {
+  font-size: 50px;
+  text-align: "center";
+  max-width: 600px;
+  color: white;
+  font-family: "Raleway", "sans-serif";
+}
 
 /* screen sizing */
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+}
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+}
 
-@media screen and (max-width: 576px) {}
-
-
+@media screen and (max-width: 576px) {
+}
