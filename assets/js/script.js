@@ -92,6 +92,7 @@ function weatherWidget(
   ulEl.style.backgroundRepeat = "no-repeat";
   ulEl.style.backgroundImage =
     'url("assets/Images/weather-images/woodBackground.jpg")';
+    ulEl.id = 'listCont';
 
   const pEl = document.createElement("p");
   pEl.style.color = "white";
@@ -124,8 +125,7 @@ function weatherWidget(
   weathercardCont.style.boxShadow = "20px 20px 20px rgba(0, 0, 0, 0.8)";
   weathercardCont.id = "weathercardElement";
 
-  //commented out border currently
-  // weathercardCont.style.border = "8px solid black";
+
   clearWeatherCard(weathercardCont);
   ifskiesShow(weathercardCont, imgCode, pEl, cityName);
 
@@ -163,7 +163,7 @@ function weatherWidget(
 
   weathercardCont.appendChild(weatherIcon);
   mapWeatherdata.appendChild(weathercardCont);
-}
+};
 
 // Function changing the background of the weather card per weather conditions
 function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
@@ -232,7 +232,7 @@ function ifskiesShow(weathercardCont, imgCode, pEl, cityName) {
       cityName +
       " there is an overcast. It's a perfect day to be indoors and visit a brewery. ";
   }
-}
+};
 
 //function preventing stacking bug of cards upon click
 function clearWeatherCard(weathercardCont) {
@@ -242,13 +242,18 @@ function clearWeatherCard(weathercardCont) {
     // .remove removes the element to prevent stacking on click
     existingWeatherCard.remove();
   }
+
 }
 
+
 function dataBackground(mapWeatherdata) {
-  mapWeatherdata.style.backgroundImage =
-    'url("assets/Images/weather-images/tripBackground1.png")';
+
+  mapWeatherdata.style.backgroundImage = 'url("assets/Images/weather-images/tripBackground1.png")'; 
   mapWeatherdata.style.backgroundSize = "cover";
   mapWeatherdata.style.backgroundRepeat = "no-repeat";
 }
 
 dataBackground(mapWeatherdata);
+
+
+
