@@ -29,7 +29,7 @@ pastCitySearchBtn.addEventListener("click", function(event) {
   if (city == "") {
     displayMessage("error", "City Search Needed");
   } else {
-    displayMessage("success", "Recent Search Saved Here");
+    displayMessage("success", "WAS --->");
   renderLastCity();
   }
 }); 
