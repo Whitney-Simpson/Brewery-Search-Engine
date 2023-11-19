@@ -1,0 +1,72 @@
+/* screen sizing */
+
+@media (max-width: 992px) {
+    .text-left p {
+        color: blueviolet;
+        font-size: 150% ;
+    }
+  
+}
+
+@media (max-width: 768px) {
+.text-left p {
+    color: aquamarine;
+    font-size: 100%;
+}
+
+#map {
+    height: 250px;
+    width: 450px;
+    right: 150px;
+    border-color: black;
+    border-width: 15px;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* #weathercardElement {
+   display: flex;
+   flex-direction: column;
+} */
+
+/*need to edit more */
+#navbar-sticky {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.container {
+    padding: 0%;
+}
+
+}
+
+@media (max-width: 576px) {
+    .text-left p {
+        color: coral;
+        font-size: 45%;
+    }
+
+    #navbar-sticky {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    #map {
+        height: 75px;
+        width: 150px;
+        right: 50px;
+        border-color: black;
+        border-width: 15px;
+        border-radius: 25px;
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+

@@ -7,6 +7,7 @@
   <!-- Google Map lines 7-9 -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/styleMedia.css"></script>
   <script type="text/javascript" src="./assets/js/scriptmap.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style type="text/tailwindcss"></style>
@@ -21,8 +22,10 @@
   <!-- font for weather API -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Bungee+Spice&family=Cinzel&family=Cormorant+Garamond:wght@300&family=DM+Serif+Display:ital@1&family=Gloria+Hallelujah&family=Great+Vibes&family=Josefin+Sans:ital,wght@0,400;1,300&family=Kaushan+Script&family=Permanent+Marker&family=Poppins:wght@300&family=Quicksand:wght@300&family=Raleway:wght@300&family=Spectral:wght@200&family=Titillium+Web:wght@300&family=Zeyada&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bebas+Neue&family=Bungee+Spice&family=Cinzel&family=Cormorant+Garamond:wght@300&family=DM+Serif+Display:ital@1&family=Gloria+Hallelujah&family=Great+Vibes&family=Josefin+Sans:ital,wght@0,400;1,300&family=Kaushan+Script&family=Permanent+Marker&family=Poppins:wght@300&family=Quicksand:wght@300&family=Raleway:wght@300&family=Spectral:wght@200&family=Titillium+Web:wght@300&family=Zeyada&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
@@ -54,7 +57,7 @@
           <li>
             <a href="contact.html"
               class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 md:dark:hover:text-yellow-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-              
+
           </li>
           <li>
             <a href="#mapWeatherdata"
@@ -97,48 +100,47 @@
         </div>
         <script src="./assets/js/scriptslide.js"></script>
       </div>
-      
-      <a href = '#mapWeatherdata'>
-        <button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full">
-          <a href = '#mapWeatherdata'>
-          <h1 id="clickTodrink">Find Brewery Near You</h1>
+
+      <a href='#mapWeatherdata'>
+        <button type="button"
+          class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded-full">
+            <h1>Find Brewery Near You</h1>
         </button>
-        </a>
+      </a>
 
     </div>
   </div>
   <br>
   <div class="flex flex-wrap gap-4 flex justify-center items-center">
-    <button id="citySearchBtn"
+    <button type="button" id="citySearchBtn"
       class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Brewery
       Search: By City</button>
   </div>
+  <div class="flex flex-wrap gap-4 flex justify-center items-center">
+    <button type="submit" id="pastCitySearchBtn"
+      class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Last City Searched</button>
+      <div id="msg"></div>
+      <p id="recentCity"></p>
+  </div>
 
-  <!-- <div class="box-border h-58 w-32 p-4 border-4 w-screen bg-blue-500 text-center font-extrabold" id ="tripDetails">
+
+  <div class="box-border h-58 w-32 p-4 border-4 w-screen bg-blue-500 text-center font-extrabold" id ="tripDetails">
     <section>Trip Details</section>
-  </div> -->
-  <!--Google Maps lines 109-116-->
- 
+  </div> 
+  <!-- Google Maps lines 109-116 -->
+
   <section id="mapWeatherdata">
 
     <input id="pac-input" class="controls" type="text" placeholder="Enter city, state, and country, then press enter" />
 
     <div id="map"></div>
-   
-  </section>
  
+  </section>
+
   <!--Google Maps-->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ_-INX9g599QWR2mqkX7Z3ctcsdSLWAk&callback=initAutocomplete&libraries=places&v=weekly"
     defer></script>
-  <div class="flex flex-wrap gap-4 flex justify-center items-center">
-    <button id="pastCitySearchBtn"
-      class="bg-blue-500 hover:bg-blue-200 bg-gray-700 text-white font-extrabold py-2 px-4 border border-blue-500 rounded">Past
-      City Searches</button>
-  </div>
-  <div id="msg"></div>
-  <p id="recentCity">City:</p>
-
   <script src="./assets/js/scriptstorage.js"></script>
   <!--when page is refreshed it reloads to top of the page-->
   <script>
@@ -147,8 +149,7 @@
   <!-- <script src="./scriptmap.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4"></script>
   <!-- this is a dayjs url for weather API pls do not delete -->
-
-
+ 
   <script src='./assets/js/script.js'></script>
 
 </body>
