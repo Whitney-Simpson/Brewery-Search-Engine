@@ -14,10 +14,14 @@
         flex-direction: column !important;
     }
 
+ 
+
+
+
     #pac-input {
         left: 75px;
         top: 0px;
-      }
+    }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
@@ -30,18 +34,27 @@
         width: 400px;
         left: 25px;
     }
-    
+
 
     #pac-input {
         left: 75px;
         top: 0px;
-      }
+    }
 
-
+   #mapWeatherdata #weathercardElement {
+        width:550px !important;
+        height:500px !important;
+        position: center !important;
+        right: 100px !important;
+        text-wrap: wrap !important;
+       
+    }
     #mapWeatherdata {
         display: flex !important;
         flex-direction: column !important;
+
     }
+ 
 
     /*need to edit more */
     #navbar-sticky {
@@ -67,11 +80,20 @@
         flex-wrap: wrap;
 
     }
+
     #map {
         width: 400px;
         right: 10px;
     }
 
+    #mapWeatherdata #weathercardElement {
+        width:550px !important;
+        height:500px !important;
+        position: center !important;
+        left: 75px !important;
+        text-wrap: wrap !important;
+       
+    }
     #mapWeatherdata {
         display: flex !important;
         flex-direction: column !important;
@@ -80,7 +102,7 @@
     #pac-input {
         left: 0px;
         top: 0px;
-      }
+    }
 }
 
 /* 320px — 480px: Mobile devices
