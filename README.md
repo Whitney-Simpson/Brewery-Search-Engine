@@ -25,6 +25,8 @@ As a Beer Lover, I want to seek out different breweries based on the city I am i
   * **Then** the map displays said city.
 * **When** I press enter after typing city in the search bar,  
   * **Then** the weather is displayed for said city and the search is saved in local storage.
+* **When** I return to the placeholder for the city serach, type **Brewery** and press enter,
+  * **Then** I am presented with all nearby breweries.
 * **When** I click the *Past City Searches* button,
   * **Then** the most recent search is displayed at the bottom of the screen.
 * **When** I refresh the page,
@@ -63,3 +65,4 @@ We used three different Third Party API's for this prioject:
 2) [Google Maps](https://developers.google.com/maps/documentation/javascript/overview)
 3) [Weather App](https://openweathermap.org/api)
 4) [Day JS](https://day.js.org/en/)
+
