@@ -1,58 +1,62 @@
-
-
-@media (max-width: 992px) {
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
     .text-left p {
         color: blueviolet;
-        font-size: 150% ;
+        font-size: 150%;
     }
 
     #map {
-        width:400px;
-      right:100px;
+        width: 400px;
+        right: 100px;
+    }
+
+    #mapWeatherdata {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #pac-input {
+        left: 75px;
+        top: -50px;
+      }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    .text-left p {
+        color: aquamarine;
+        font-size: 100%;
+    }
+
+    #map {
+        width: 400px;
+        left: 25px;
+    }
+    
+
+    #pac-input {
+        left: 75px;
+        top: 0px;
+      }
+
+
+    #mapWeatherdata {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /*need to edit more */
+    #navbar-sticky {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .container {
+        padding: 0%;
     }
 
 }
 
-@media (max-width: 768px) {
-.text-left p {
-    color: aquamarine;
-    font-size: 100%;
-}
-
-#map {
-    height: 250px;
-    width: 450px;
-    right: 150px;
-    border-color: black;
-    border-width: 15px;
-    border-radius: 25px;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
-}
-/* 
-#weathercardElement {
-width: 300px;
-height: 300px;
-}
-
-#mapWeatherdata {
-    display: flex;
-    flex-direction: column;
-} */
-
-/*need to edit more */
-#navbar-sticky {
-    display: flex;
-    flex-direction: column-reverse;
-
-}
-
-.container {
-    padding: 0%;
-}
-
-}
-
-@media (max-width: 576px) {
+@media only screen and (max-width: 480px) and (min-width: 320px) {
     .text-left p {
         color: coral;
         font-size: 45%;
@@ -64,14 +68,19 @@ height: 300px;
 
     }
     #map {
-        height: 75px;
-        width: 150px;
-        right: 50px;
-        border-color: black;
-        border-width: 15px;
-        border-radius: 25px;
-        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
+        width: 400px;
+        right: 10px;
     }
+
+    #mapWeatherdata {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #pac-input {
+        left: 0px;
+        top: 0px;
+      }
 }
 
 /* 320px — 480px: Mobile devices
@@ -79,4 +88,3 @@ height: 300px;
 769px — 1024px: Small screens, laptops
 1025px — 1200px: Desktops, large screens
 1201px and more —  Extra large screens, TV */
-
