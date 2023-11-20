@@ -47,8 +47,9 @@ As a Beer Lover, I want to seek out different breweies based on the city I am in
 
 
 # Third Party API's
-We used three different Third Party API's for this prioject:
+We used several different Third Party API's for this project:
 1) [tailwindcss](https://tailwindcss.com/)
 2) [Google Maps](https://developers.google.com/maps/documentation/javascript/overview)
 3) [Weather App](https://openweathermap.org/api)
 4) [Day JS](https://day.js.org/en/)
+5) [Google Fonts](https://fonts.google.com/)
