@@ -7,6 +7,7 @@
     #map {
         width: 400px;
         right: 100px;
+        left: 15px;
     }
 
     #mapWeatherdata {
@@ -14,12 +15,19 @@
         flex-direction: column !important;
     }
 
- 
+    #mapWeatherdata #weathercardElement {
+        width:450px !important;
+         height:350px !important;
+         position: center !important;
+         left: 15px !important;
+         text-wrap: wrap !important;
+        
+     }
 
 
 
     #pac-input {
-        left: 75px;
+        left: 50px;
         top: 0px;
     }
 }
@@ -42,13 +50,14 @@
     }
 
    #mapWeatherdata #weathercardElement {
-        width:550px !important;
-        height:500px !important;
+       width:450px !important;
+        height:350px !important;
         position: center !important;
-        right: 100px !important;
+        left: 0px !important;
         text-wrap: wrap !important;
        
     }
+
     #mapWeatherdata {
         display: flex !important;
         flex-direction: column !important;
@@ -81,16 +90,22 @@
 
     }
 
+    #pac-input {
+        left: 0px;
+        top: 0px;
+    }
+
     #map {
-        width: 400px;
+        width: 100px;
         right: 10px;
+        position: center;
     }
 
     #mapWeatherdata #weathercardElement {
-        width:550px !important;
-        height:500px !important;
+        width:450px !important;
+        height:350px !important;
         position: center !important;
-        left: 75px !important;
+        left: 0px !important;
         text-wrap: wrap !important;
        
     }
@@ -99,10 +114,7 @@
         flex-direction: column !important;
     }
 
-    #pac-input {
-        left: 0px;
-        top: 0px;
-    }
+    
 }
 
 /* 320px — 480px: Mobile devices
