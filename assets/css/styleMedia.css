@@ -1,11 +1,16 @@
-/* screen sizing */
+
 
 @media (max-width: 992px) {
     .text-left p {
         color: blueviolet;
         font-size: 150% ;
     }
-  
+
+    #map {
+        width:400px;
+      right:100px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -23,10 +28,15 @@
     border-radius: 25px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
 }
+/* 
+#weathercardElement {
+width: 300px;
+height: 300px;
+}
 
-/* #weathercardElement {
-   display: flex;
-   flex-direction: column;
+#mapWeatherdata {
+    display: flex;
+    flex-direction: column;
 } */
 
 /*need to edit more */

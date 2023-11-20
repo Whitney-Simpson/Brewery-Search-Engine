@@ -92,6 +92,7 @@ function weatherWidget(
   ulEl.style.backgroundRepeat = "no-repeat";
   ulEl.style.backgroundImage =
     'url("assets/Images/weather-images/woodBackground.jpg")';
+    ulEl.id = 'listCont';
 
   const pEl = document.createElement("p");
   pEl.style.color = "white";
@@ -124,8 +125,7 @@ function weatherWidget(
   weathercardCont.style.boxShadow = "20px 20px 20px rgba(0, 0, 0, 0.8)";
   weathercardCont.id = "weathercardElement";
 
-  //commented out border currently
-  // weathercardCont.style.border = "8px solid black";
+
   clearWeatherCard(weathercardCont);
   ifskiesShow(weathercardCont, imgCode, pEl, cityName);
 
