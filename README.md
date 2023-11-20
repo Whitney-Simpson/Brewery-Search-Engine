@@ -2,11 +2,16 @@
 ## "Looking for a Brewery? We can help! Need to know the weather? We can do that to!"
 
 
-![Alt text](image.png)
+[BreweryZip](https://whitney-simpson.github.io/Brewery-Search-Engine/#mapWeatherdata)
 
 
-# User Story (Heinz Edit)
-As a Beer Lover, I want to seek out different breweies based on the city I am in or visiting, get their location on a map, and know the weather at said brewery. End user goal: Find a brewery in the city I am searching and know the weather forcast. End business goal: Provide beer lovers with a searching tool to find different breweries and know the weather.
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+
+
+
+# User Story
+As a Beer Lover, I want to seek out different breweries based on the city I am in or visiting, get their location on a map, and know the weather at said brewery. End user goal: Find a brewery in the city I am searching and know the weather forcast. End business goal: Provide beer lovers with a searching tool to find different breweries and know the weather.
 
 
 # ACCEPTANCE CRITERIA
@@ -16,8 +21,14 @@ As a Beer Lover, I want to seek out different breweies based on the city I am in
   * **Then** I am presented with nearby breweries and the weather forecast.
 * **When** I click on the contacts link,
   * **Then** I am shown the contact information of the website.
-* **When** I enter my name and email address,
-  * **Then** my information is stored in local storage.
+* **When** I enter the city in the search bar,
+  * **Then** the map displays said city.
+* **When** I press enter after typing city in the search bar,  
+  * **Then** the weather is displayed for said city and the search is saved in local storage.
+* **When** I click the *Past City Searches* button,
+  * **Then** the most recent search is displayed at the bottom of the screen.
+* **When** I refresh the page,
+  * **Then** the previous city search is displayed.
 
 
 # Authors and Developers
